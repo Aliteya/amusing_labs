@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход студента</title>
+</head>
+<body>
+    <h1>Вход студента</h1>
+    <form method="post" action="/stud/login">
+        <label for="student_name">Имя студента:</label>
+        <input type="text" id="student_name" name="student_name" required>
+        <br>
+        <button type="submit">Войти</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
+
+

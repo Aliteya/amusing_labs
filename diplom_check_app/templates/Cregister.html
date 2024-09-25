@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация куратора</title>
+</head>
+<body>
+    <h1>Регистрация куратора</h1>
+    <form method="post" action="/curat/Cregister">
+        <label for="curator_name">Имя куратора:</label>
+        <input type="text" id="curator_name" name="curator_name" required>
+        <br>
+        <label for="curator_age">Возраст куратора:</label>
+        <input type="number" id="curator_age" name="curator_age" required>
+        <br>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

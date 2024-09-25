@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход куратора</title>
+</head>
+<body>
+    <h1>Вход куратора</h1>
+    <form method="post" action="/curat/Clogin">
+        <label for="curator">Имя куратора:</label>
+        <input type="text" id="curator_name" name="curator_name" required>
+        <br>
+        <button type="submit">Войти</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

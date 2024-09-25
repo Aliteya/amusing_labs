@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация студента</title>
+</head>
+<body>
+    <h1>Регистрация студента</h1>
+    <form method="post" action="/stud/register">
+        <label for="student_name">Имя студента:</label>
+        <input type="text" id="student_name" name="student_name" required>
+        <br>
+        <label for="student_age">Возраст студента:</label>
+        <input type="number" id="student_age" name="student_age" required>
+        <br>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
+
+

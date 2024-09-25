@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Проверка дипломов</title>
+</head>
+<body>
+    <h1>Проверка дипломов</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <ul>
+    {% for diplom in diploms %}
+        <li>{{ diplom.diplom_name }} - 
+            <button onclick="window.location.href='/curat/check_diplom/{{diplom.diplom_id}}'">Проверить</button>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+
+

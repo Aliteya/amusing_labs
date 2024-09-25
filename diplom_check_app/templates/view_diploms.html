@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Просмотр дипломов</title>
+</head>
+<body>
+    <h1>Все дипломы</h1>
+    <ul>
+    {% for diplom in diploms %}
+        <li>{{ diplom.diplom_name }} - Проверен: {{ diplom._checked }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+

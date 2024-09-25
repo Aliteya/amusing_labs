@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карточки студентов</title>
+</head>
+<body>
+    <h1>Карточки студентов</h1>
+    <ul>
+    {% for student in students %}
+        <li>
+            {{ student.student_name }} ({{ student.student_age }} лет)
+            <form method="post" action="/curat/check_diploms/student/{{ student.student_id }}">
+                <input type="hidden" name="curator_id" value="{{ curator.curator_id }}">
+                <button type="submit">Выбрать студента</button>
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+
